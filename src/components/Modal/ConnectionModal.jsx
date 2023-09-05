@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   ModalMain: {
     height: verticalScale(70),
     // backgroundColor: '#435CA8',
-    backgroundColor: "#fff",
+    backgroundColor: Color.Main,
     borderRadius: 10,
     marginTop: scale(20),
     flexDirection: "row",

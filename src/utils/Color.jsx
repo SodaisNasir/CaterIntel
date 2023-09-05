@@ -17,4 +17,6 @@ export const Color = {
   ThemeDarkGreen: "#00C099",
   ThemeLightGreen: "#F2FCFA",
   Danger: "red",
+  ThemeCream: "#F4F4F4",
+  Sky: "#8EBCFE",
 };

@@ -33,9 +33,11 @@ import ConnectionModal from "../../components/Modal/ConnectionModal";
 const windowHeight = Dimensions.get("window").height;
 const CELL_COUNT = 4;
 const OTP = ({ route, navigation }) => {
-  const { type, data, saveImage, user_id } = route.params;
+  // const { type, data, saveImage, user_id } = route.params;
+  const { type, data, saveImage } = route.params;
   const dispatch = useDispatch();
-  const OTP = useSelector((state) => state.otp);
+  // const OTP = useSelector((state) => state.otp);
+  const OTP = 1234;
 
   const [time, setTime] = useState(10);
   const [otpResent, setOtpResent] = useState(false);
@@ -84,7 +86,7 @@ const OTP = ({ route, navigation }) => {
         setSuccessModal(true);
         setTimeout(() => {
           setSuccessModal(false);
-          navigation.navigate("AccountType", {
+          navigation.navigate("login", {
             // data: data,
             // saveImage: saveImage,
           });
@@ -101,7 +103,7 @@ const OTP = ({ route, navigation }) => {
   };
 
   return (
-    <View style={GlobalStyle.container}>
+    <View style={GlobalStyle.grey_container}>
       {/* <LogoCard /> */}
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.MainBox}>
@@ -181,13 +183,13 @@ const OTP = ({ route, navigation }) => {
 };
 const styles = StyleSheet.create({
   Find: {
-    color: Color.Yellow,
+    color: Color.Main,
     fontFamily: Font.Gilroy500,
     fontSize: scale(30),
     textAlign: "center",
   },
   Search: {
-    color: Color.White,
+    color: Color.Main,
     fontFamily: Font.Gilroy500,
     fontSize: scale(16),
     textAlign: "center",
@@ -222,7 +224,7 @@ const styles = StyleSheet.create({
     borderRadius: scale(9),
     borderColor: Color.Main,
     textAlign: "center",
-    color: Color.White,
+    color: Color.Black,
     fontFamily: Font.Gilroy400,
     textAlignVertical: "center",
   },

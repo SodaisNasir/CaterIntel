@@ -4,7 +4,6 @@ import { StyleSheet, Text, TextInput, View } from "react-native";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import { Color } from "../utils/Color";
 import { Font } from "../utils/Font";
-import { GlobalStyle } from "../Constants/GlobalStyle";
 
 const CustomInput = forwardRef((props, ref) => {
   const { field } = useController({

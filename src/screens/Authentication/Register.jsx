@@ -102,7 +102,7 @@ const Register = ({ navigation, route }) => {
         //     OS
         //   )
         // );
-        navigation.navigate("otp");
+        navigation.navigate("otp", { type: type, data, saveImage });
       } else {
         setErrorModal(true);
         setTimeout(() => {
@@ -121,6 +121,7 @@ const Register = ({ navigation, route }) => {
     <SafeAreaView style={GlobalStyle.grey_container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* <LogoCard /> */}
+        <Text style={styles.SignUpText}>Sign In</Text>
         <Pressable onPress={photosave} style={styles.ImageBox}>
           <Image
             style={[GlobalStyle.Image, { borderRadius: scale(100) }]}
@@ -131,7 +132,6 @@ const Register = ({ navigation, route }) => {
             }
           />
         </Pressable>
-        <Text style={styles.SignUpText}>Sign In</Text>
         <View style={{ paddingHorizontal: moderateScale(20) }}>
           <CustomInput
             fontSize={scale(16)}

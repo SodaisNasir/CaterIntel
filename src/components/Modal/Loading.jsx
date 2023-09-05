@@ -11,7 +11,7 @@ const Loading = ({ isVisible, bar, value }) => {
     <SafeAreaView style={{ justifyContent: "center" }}>
       <ReactNativeModal
         isVisible={isVisible}
-        style={[styles.modal, GlobalStyle.Container]}
+        style={[styles.modal, styles.container]}
       >
         <View style={styles.buttons}>
           <LottieView
@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
     width: "60%",
     alignSelf: "center",
     borderRadius: scale(20),
+  },
+  container: {
+    flex: 1,
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
   },
 });
 export default Loading;

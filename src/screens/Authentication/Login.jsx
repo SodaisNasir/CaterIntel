@@ -103,13 +103,13 @@ const Login = ({ navigation }) => {
         {errors.password && <Validation title={errors.password.message} />}
         <Text
           onPress={() =>
-            navigation.navigate("Reset", {
+            navigation.navigate("find", {
               type: "find",
             })
           }
-          style={GlobalStyle.InputHeading}
+          style={[GlobalStyle.InputHeading, { textAlign: "right" }]}
         >
-          Forgot Password
+          Forgot Password?
         </Text>
         <CustomButton
           Ripple={GlobalStyle.WhiteRipple}

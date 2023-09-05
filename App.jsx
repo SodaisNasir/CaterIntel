@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import AuthNavigator from "./src/navigation/AuthNavigator";
-// import UserNavigator from "./src/navigation/UserNavigator";
 import { useSelector } from "react-redux";
 import Splash from "./src/screens/SplashScreen";
+import UserNavigator from "./src/navigation/UserNavigator";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ const App = () => {
       ) : (
         <>
           {SignIn == null && <AuthNavigator />}
-          {/* {SignIn == "1234" && <UserNavigator />} */}
+          {SignIn == "user@gmail.com" && <UserNavigator />}
         </>
       )}
     </>

@@ -51,6 +51,7 @@ export const GlobalStyle = StyleSheet.create({
     backgroundColor: Color.white,
     height: verticalScale(60),
     borderTopColor: "#F4F4F5",
+    borderTopWidth: scale(1),
   },
   HideBar: {
     display: "none",
@@ -63,7 +64,7 @@ export const GlobalStyle = StyleSheet.create({
     color: Color.Main,
   },
   ModalContainer: {
-    justifyContent: "flex-start",
+    justifyContent: "center",
     width: "95%",
     borderRadius: scale(10),
     backgroundColor: Color.white,
@@ -72,7 +73,7 @@ export const GlobalStyle = StyleSheet.create({
     paddingVertical: moderateVerticalScale(15),
   },
   MainModal: {
-    justifyContent: "flex-start",
+    justifyContent: "center",
     margin: 0,
     backgroundColor: "rgba(0,0,0,0.4)",
   },
@@ -157,39 +158,10 @@ export const GlobalStyle = StyleSheet.create({
     flex: 1,
     margin: scale(1),
   },
-  PlusBox: {
-    position: "absolute",
-    bottom: verticalScale(10),
-    right: scale(10),
-    backgroundColor: "#CFD0D4",
-    borderRadius: 360,
-    width: scale(60),
-    aspectRatio: 1 / 1,
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden",
-  },
+
   BigImage: {
     width: "100%",
     overflow: "hidden",
-  },
-  anchorText: {
-    color: Color.Main,
-    textDecorationLine: "underline",
-    fontFamily: Font.Poppins600,
-    fontSize: scale(17),
-    marginTop: verticalScale(8),
-  },
-  key: {
-    color: Color.MidGrey,
-    fontSize: scale(15),
-    fontFamily: Font.Inter500,
-    width: "55%",
-  },
-  value: {
-    color: Color.Black,
-    fontSize: scale(15),
-    fontFamily: Font.Inter500,
   },
   RowContrainer: {
     paddingVertical: moderateVerticalScale(10),
@@ -220,21 +192,24 @@ export const GlobalStyle = StyleSheet.create({
     borderColor: Color.border,
     marginTop: verticalScale(10),
   },
-  ChooseText: {
-    fontSize: scale(14),
-    color: Color.MidGrey,
-    fontFamily: Font.Inter500,
+  PlusBox: {
+    position: "absolute",
+    bottom: verticalScale(10),
+    right: scale(10),
+    backgroundColor: "#CFD0D4",
+    borderRadius: 360,
+    width: scale(60),
+    aspectRatio: 1 / 1,
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
   },
-  VerticalSpace: {
-    height: verticalScale(20),
-  },
-  KeyValueContainer: {
-    backgroundColor: "#fff",
-    paddingHorizontal: moderateScale(20),
-    borderWidth: scale(1),
-    borderColor: Color.border,
-    marginTop: verticalScale(5),
-    marginHorizontal: scale(20),
-    borderRadius: scale(15),
+  SmallBtn: {
+    backgroundColor: Color.Non,
+    borderColor: Color.White,
+    borderRadius: scale(30),
+    marginTop: verticalScale(30),
+    width: "85%",
+    height: verticalScale(50),
   },
 });

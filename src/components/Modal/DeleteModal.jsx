@@ -3,12 +3,12 @@ import { StyleSheet, Text, View } from "react-native";
 import Modal from "react-native-modal";
 import { GlobalStyle } from "../../Constants/GlobalStyle";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { Colors } from "../../utils/Color";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import { Font } from "../../utils/Font";
 import CustomButton from "../CustomButton";
+import { Color } from "../../utils/Color";
 
-const DeleteModal = ({ visible, KeepPress, DeletePress, OnClose, value }) => {
+const DeleteModal = ({ visible, DeletePress, OnClose, value }) => {
   return (
     <Modal
       isVisible={visible}
@@ -20,7 +20,7 @@ const DeleteModal = ({ visible, KeepPress, DeletePress, OnClose, value }) => {
     >
       <View style={[GlobalStyle.ModalContainer, styles.ModalContainer]}>
         <View style={styles.iconBox}>
-          <Ionicons name="warning" color={Colors.Danger} size={scale(30)} />
+          <Ionicons name="warning" color="#990000" size={scale(30)} />
         </View>
         <Text style={styles.Heading}>Delete {value}</Text>
         <Text style={styles.SubHeading}>
@@ -29,21 +29,21 @@ const DeleteModal = ({ visible, KeepPress, DeletePress, OnClose, value }) => {
         <View style={[GlobalStyle.Row, { justifyContent: "space-evenly" }]}>
           <CustomButton
             Ripple={GlobalStyle.PurpleRipple}
-            onPress={KeepPress}
+            onPress={OnClose}
             textStyle={styles.textStyle}
-            containerStyle={[
+            ButtonStyle={[
               styles.containerStyle,
-              { backgroundColor: "#F5F5F7" },
+              { backgroundColor: Color.Main },
             ]}
             title="No, Keep It."
           />
           <CustomButton
             Ripple={GlobalStyle.WhiteRipple}
             onPress={DeletePress}
-            textStyle={[styles.textStyle, { color: Colors.White }]}
-            containerStyle={[
+            textStyle={[styles.textStyle, { color: Color.White }]}
+            ButtonStyle={[
               styles.containerStyle,
-              { backgroundColor: Colors.Danger },
+              { backgroundColor: "#990000" },
             ]}
             title="Yes, Delete!"
           />
@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   Heading: {
-    color: Colors.Black,
+    color: Color.Black,
     fontSize: scale(18),
     textAlign: "center",
     fontFamily: Font.Poppins500,
   },
   SubHeading: {
-    color: Colors.Black,
+    color: Color.Black,
     fontSize: scale(14),
     textAlign: "center",
     fontFamily: Font.Poppins400,
