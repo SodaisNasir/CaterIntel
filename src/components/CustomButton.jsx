@@ -14,23 +14,23 @@ const CustomButton = (props) => {
       onPress={props.onPress}
       style={[styles.containerStyle, props.ButtonStyle]}
     >
-      {props.File ? (
+      {props.File && (
         <Feather
           style={{ paddingHorizontal: 5 }}
           name="upload"
           color={Color.MidGrey}
           size={scale(20)}
         />
-      ) : null}
+      )}
       <Text style={[styles.font, props.textStyle]}>{props.title}</Text>
-      {props.selected ? (
+      {props.selected && (
         <AntDesign
           style={{ paddingHorizontal: 5 }}
           name="checkcircle"
-          color={Color.Main}
+          color={Color.White}
           size={scale(20)}
         />
-      ) : null}
+      )}
     </Pressable>
   );
 };

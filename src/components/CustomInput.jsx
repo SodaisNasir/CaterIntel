@@ -41,7 +41,7 @@ const CustomInput = forwardRef((props, ref) => {
           maxLength={props.maxLength}
           cursorColor={Color.Main}
           keyboardAppearance="dark"
-          selectionColor={Color.Main}
+          selectionColor="rgba(12, 19, 79, 0.5)"
         />
       </View>
     </>

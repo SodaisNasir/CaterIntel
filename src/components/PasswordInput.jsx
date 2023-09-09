@@ -39,6 +39,9 @@ const PasswordInput = forwardRef((props, ref) => {
           placeholderStyle={props.placeholderStyle}
           fontSize={props.fontSize}
           maxLength={props.maxLength}
+          cursorColor={Color.Main}
+          keyboardAppearance="dark"
+          selectionColor={Color.Main}
         />
         <Entypo
           color="#575E6E"

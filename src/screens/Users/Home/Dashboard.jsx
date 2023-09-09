@@ -14,7 +14,10 @@ import Header from "../../../components/Header";
 import Graph from "../../../components/Cards/Graph";
 import FontAwesome6 from "react-native-vector-icons/FontAwesome6";
 import { scale, verticalScale } from "react-native-size-matters";
+import ItemModal from "../../../components/Modal/ItemModal";
 const Dashboard = ({ navigation }) => {
+  const [SelectItem, setSelectItem] = useState(false);
+  const [select, setSelect] = useState(false);
   useFocusEffect(
     useCallback(() => {
       navigation.getParent()?.setOptions({
@@ -30,9 +33,21 @@ const Dashboard = ({ navigation }) => {
       <Pressable
         android_ripple={GlobalStyle.PurpleRipple}
         style={styles.PlusBox}
+        onPress={() => setSelectItem(true)}
       >
         <FontAwesome6 name="plus" size={scale(20)} color={Color.LightGrey} />
       </Pressable>
+      <ItemModal
+        visible={SelectItem}
+        onClose={() => setSelectItem(false)}
+        selected={select}
+        onPress={() => {
+          setSelect(true);
+          setTimeout(() => {
+            setSelectItem(false);
+          }, 500);
+        }}
+      />
       <ConnectionModal />
     </SafeAreaView>
   );
